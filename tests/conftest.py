@@ -16,12 +16,11 @@ def load_env():
 def setup_browser():
     options = Options()
     selenoid_capabilities = {
-        "browserName": "chrome",
-        "browserVersion": '100.0',
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True,
-            "sessionTimeout": "30m"
+        'browserName': 'chrome',
+        'browserVersion': '100.0',
+        'selenoid:options': {
+            'enableVNC': True,
+            'enableVideo': True
         }
     }
     options.capabilities.update(selenoid_capabilities)
@@ -29,7 +28,7 @@ def setup_browser():
     login = os.getenv('LOGIN')
     password = os.getenv('PASSWORD')
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        command_executor=f'https://{login}:{password}@selenoid.autotests.cloud/wd/hub',
         options=options
     )
     browser.config.driver = driver
@@ -44,4 +43,4 @@ def setup_browser():
     attach.add_logs(browser)
     attach.add_video(browser)
 
-    driver.quit()
+    browser.quit()
