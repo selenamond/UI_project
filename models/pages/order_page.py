@@ -1,4 +1,4 @@
-from selene import Browser, have
+from selene import Browser, have, be
 
 
 class OrderPage:
@@ -16,7 +16,7 @@ class OrderPage:
         self.driver.element('#bx-soa-delivery button.pull-right').click()
         self.driver.element('#soa-property-1').type(full_name)
         self.driver.element('#soa-property-2').type(email)
-        self.driver.element('#soa-property-3').type(phone_number)
+        self.driver.element('#soa-property-25').type(phone_number)
         self.driver.element('#bx-soa-properties button.pull-right').click()
         return self
 
@@ -30,5 +30,6 @@ class OrderPage:
         return self
 
     def popup_not_accept(self):
-        self.driver.element('span.main-user-consent-request-popup-button-rej').click()
+        self.driver.element('.main-user-consent-request-popup-button-rej').should(
+            be.clickable).click()
         return self

@@ -15,6 +15,13 @@ def load_env():
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser():
     options = Options()
+    options.add_argument('--disable-extensions')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--headless')
+    options.add_argument('--window-size=1920x1080')
+
     selenoid_capabilities = {
         'browserName': 'chrome',
         'browserVersion': '100.0',
@@ -31,6 +38,7 @@ def setup_browser():
         command_executor=f'https://{login}:{password}@selenoid.autotests.cloud/wd/hub',
         options=options
     )
+
     browser.config.driver = driver
     browser.config.window_width = 1920
     browser.config.window_height = 1080

@@ -37,7 +37,7 @@ def test_add_items_to_basket(app: ApplicationManager):
     with allure.step('Добавляем товар в корзину'):
         app.basket.add_item()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Харбанс').open_item_page()
+        app.search.input(value='Виафоре').open_item_page()
     with allure.step('Добавляем товар в корзину и открываем ее'):
         app.basket.add_item().open()
     with allure.step('Проверяем количество товаров в корзине'):
@@ -56,7 +56,7 @@ def test_add_items_to_favorite(app: ApplicationManager):
     with allure.step('Добавляем товар в избранное'):
         app.favorite.add()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Харбанс').open_item_page()
+        app.search.input(value='Виафоре').open_item_page()
     with allure.step('Добавляем товар в избранное и открываем список избранного'):
         app.favorite.add().open()
     with allure.step('Проверяем наличие в избранном ранее добавленных товаров'):
@@ -76,13 +76,14 @@ def test_order_registration(app: ApplicationManager):
     with allure.step('Нажимаем в корзине Оформить заказ'):
         app.order.open()
     with allure.step('Заполняем данные'):
-        app.order.fill_data(full_name='Тестовый Пользователь', email='test@gmail.com',
-                            phone_number='89182837475')
+        app.order.fill_data(full_name='Тестовый Пользователь',
+                            email='test@gmail.com',
+                            phone_number='89118577463')
     with allure.step('Подтверждаем заполнение данных нажатием Оформление заказа'):
         app.order.save()
     with allure.step('Проверяем наличие всплывающего окна'):
         app.order.popup_window()
-    with allure.step('Отказываемя от обработки персональных данных'):
+    with allure.step('Отказываемcя от обработки персональных данных'):
         app.order.popup_not_accept()
 
 
