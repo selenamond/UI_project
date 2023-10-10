@@ -66,18 +66,17 @@ pytest .
 allure serve allure-results
 ``` 
 ##### Во вкладке Graphs можно посмотреть графики о прохождении тестов, по их приоритезации, по времени прохождения и др.
-![This is an image](images/screenshots/allure_graphs.png)
+![This is an image](images/allure_graphs.png)
 
-##### Во вкладке Suites находятся собранные тест кейсы со статусом выполнения, описанием теста, curl запроса и ответ в формате json
-![This is an image](images/screenshots/allure_suites.png)
+##### Во вкладке Suites находятся собранные тест кейсы со статусом и временем выполнения, описанием тестовых шагов.
+#### В teardown каждого теста можно посмотреть видеозапись прохождения теста, скриншот страницы, page_source и логи браузера.
+![This is an image](images/allure_suites.png)
 
-#### В teardown каждого теста можно посмотреть видеозапись прохождения теста.
-![logo](images/allure_video.png)
 
 <!-- Telegram -->
 
 ### <img width="3%" title="Telegram" src="images/tg.png"> Интеграция с Telegram
 ##### После прохождения тестов, в Telegram bot приходит сообщение с графиком и информацией о выполненных тестах
-![This is an image](images/screenshots/tg_allure.png)
+![This is an image](images/tg_notification.png)
 
 
