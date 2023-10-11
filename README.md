@@ -35,15 +35,25 @@
 #### По умолчанию все тесты запускаются удалённо на Selenoid
 
 ### Для локального запуска
-1. Склонируйте репозиторий
+1. Склонируйте репозиторий 
+``` 
+https://github.com/selenamond/UI_project.git
+``` 
 2. Откройте проект в PyCharm
-3. Введите в териминале команду
+3. Введите в терминале команды
 ``` 
 python -m venv .venv
+```
+```
 source .venv/bin/activate
+```
+```
 pip install -r requirements.txt
+```
+```
 pytest .
 ```
+
 <!-- Jenkins -->
 
 ## <img width="4%" src="images/jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/selenamond_ui_shop/):
@@ -58,7 +68,7 @@ pytest .
 <!-- Allure report -->
 
 #### После прохождения тестов, результаты можно посмотреть в Allure отчете, где так же содержится ссылка на Jenkins.
-![logo](images/allure_show_all.png)
+![logo](images/allure1.png)
 
 #### Если тест запускался локально:
 Введите в терминале команду для создания отчета в Allure Reports
