@@ -33,7 +33,7 @@ def test_add_items_to_basket(app: ApplicationManager):
     with allure.step('Открываем стартовую страницу'):
         app.site.open()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Тест-дизайн').open_item_page()
+        app.search.input(value='Элевсин').open_item_page()
     with allure.step('Добавляем товар в корзину'):
         app.basket.add_item()
     with allure.step('Ищем товар и открываем его страницу'):
@@ -52,7 +52,7 @@ def test_add_items_to_favorite(app: ApplicationManager):
     with allure.step('Открываем стартовую страницу'):
         app.site.open()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Тест-дизайн').open_item_page()
+        app.search.input(value='Элевсин').open_item_page()
     with allure.step('Добавляем товар в избранное'):
         app.favorite.add()
     with allure.step('Ищем товар и открываем его страницу'):
@@ -60,7 +60,7 @@ def test_add_items_to_favorite(app: ApplicationManager):
     with allure.step('Добавляем товар в избранное и открываем список избранного'):
         app.favorite.add().open()
     with allure.step('Проверяем наличие в избранном ранее добавленных товаров'):
-        app.favorite.check_items('Тест-дизайн').check_items('Харбанс')
+        app.favorite.check_items('Элевсин').check_items('Виафоре')
 
 
 @allure.description(
@@ -70,7 +70,7 @@ def test_order_registration(app: ApplicationManager):
     with allure.step('Открываем стартовую страницу'):
         app.site.open()
     with allure.step('Ищем товар и открываем страницу товара'):
-        app.search.input(value='Тест-дизайн').open_item_page()
+        app.search.input(value='Элевсин').open_item_page()
     with allure.step('Добавляем товар в корзину и открываем ее'):
         app.basket.add_item().open()
     with allure.step('Нажимаем в корзине Оформить заказ'):
@@ -93,7 +93,7 @@ def test_invalid_coupon(app: ApplicationManager):
     with allure.step('Открываем стартовую страницу'):
         app.site.open()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Тест-дизайн').open_item_page()
+        app.search.input(value='Элевсин').open_item_page()
     with allure.step('Добавляем товар в корзину и открываем ее'):
         app.basket.add_item().open()
     with allure.step('Вводим невалидный промокод и проверяем что он не найден'):
