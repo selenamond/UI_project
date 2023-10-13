@@ -37,7 +37,7 @@ def test_add_items_to_basket(app: ApplicationManager):
     with allure.step('Добавляем товар в корзину'):
         app.basket.add_item()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Виафоре').open_item_page()
+        app.search.input(value='Blizzard Косплей').open_item_page()
     with allure.step('Добавляем товар в корзину и открываем ее'):
         app.basket.add_item().open()
     with allure.step('Проверяем количество товаров в корзине'):
@@ -56,11 +56,11 @@ def test_add_items_to_favorite(app: ApplicationManager):
     with allure.step('Добавляем товар в избранное'):
         app.favorite.add()
     with allure.step('Ищем товар и открываем его страницу'):
-        app.search.input(value='Виафоре').open_item_page()
+        app.search.input(value='Blizzard Косплей').open_item_page()
     with allure.step('Добавляем товар в избранное и открываем список избранного'):
         app.favorite.add().open()
     with allure.step('Проверяем наличие в избранном ранее добавленных товаров'):
-        app.favorite.check_items('Элевсин').check_items('Виафоре')
+        app.favorite.check_items('Элевсин').check_items('Blizzard Косплей')
 
 
 @allure.description(
