@@ -56,7 +56,7 @@ pytest .
 
 <!-- Jenkins -->
 
-## <img width="4%" src="images/jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/selenamond_ui_shop/):
+## <img width="4%" src="images/jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/selenamond_ui/):
 
 #### При нажатии на "Собрать сейчас" начнется сборка тестов и их прохождение, через виртуальную машину Selenoid.
 ![logo](images/jenkins_run.png)
